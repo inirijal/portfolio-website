@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Custom Styles, Layout Configurations & Animations
+   Portfolio: Muhammad Rizal Ahnaf
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Custom Scrollbar
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2a2a;
+}
+
+/* --------------------------------------------------------------------------
+   Watermark & Typography Effects
+   -------------------------------------------------------------------------- */
+.stroke-text {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.07);
+  color: transparent;
+  user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+   Background Dot-Grid Texture
+   -------------------------------------------------------------------------- */
+.bg-grid {
+  background-size: 32px 32px;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Menu Drawer Transition
+   -------------------------------------------------------------------------- */
+#mobile-menu {
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              visibility 0.35s ease;
+}
+
+#mobile-menu.menu-closed {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#mobile-menu.menu-open {
+  max-height: 380px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Project Filter Transition & Card Hover
+   -------------------------------------------------------------------------- */
+.project-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-item.hidden-card {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.project-filter-btn.active {
+  background-color: #ff2a2a;
+  color: #ffffff;
+  border-color: #ff2a2a;
+  box-shadow: 0 0 15px rgba(255, 42, 42, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Active Navigation Link Glow
+   -------------------------------------------------------------------------- */
+.nav-link.active {
+  color: #ffffff;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff2a2a;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #ff2a2a;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Notification (For Copying Email/Contact)
+   -------------------------------------------------------------------------- */
+#toast-notification {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+#toast-notification.toast-hidden {
+  opacity: 0;
+  transform: translate(-50%, 20px) scale(0.95);
+  pointer-events: none;
+}
+
+#toast-notification.toast-visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Subtle Keyframe Animations
+   -------------------------------------------------------------------------- */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.05);
+  }
+}
+
+.ambient-glow {
+  animation: pulseGlow 8s infinite ease-in-out;
+}

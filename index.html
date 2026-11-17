@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Rijal Ahnaf — Personal Portfolio</title>
+
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+  </head>
+
+  <body
+    class="bg-brand-black text-white font-sans antialiased selection:bg-brand-red selection:text-white relative overflow-x-hidden min-h-screen"
+  >
+    <!-- BACKGROUND TEXTURE & AMBIENT GLOW -->
+    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-red/10 blur-[140px] pointer-events-none rounded-full z-0"
+    ></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header
+      class="relative z-20 border-b border-brand-border/60 bg-brand-black/80 backdrop-blur-md sticky top-0"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <!-- Role / Brand Tag -->
+        <div class="flex items-center gap-2.5">
+          <span
+            class="inline-block w-2 h-2 rounded-full bg-brand-red shadow-[0_0_8px_#FF2A2A]"
+          ></span>
+          <span
+            class="font-heading font-bold text-xs md:text-sm tracking-widest text-neutral-300 uppercase"
+          >
+            WEB DESIGNER <span class="text-neutral-500">&amp;</span> DIGITAL
+            CREATOR
+          </span>
+        </div>
+
+        <!-- Quick Nav Links (Desktop) -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider text-neutral-400 uppercase"
+        >
+          <a
+            href="#projects"
+            class="desktop-nav-link nav-link hover:text-white transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="desktop-nav-link nav-link hover:text-white transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#process"
+            class="desktop-nav-link nav-link hover:text-white transition-colors"
+            >Process</a
+          >
+          <a
+            href="#contact"
+            class="desktop-nav-link nav-link hover:text-white transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Right Side: Status Pill & Mobile Menu Button -->
+        <div class="flex items-center gap-3">
+          <!-- Status Pill -->
+          <div
+            class="hidden sm:flex items-center gap-2.5 bg-neutral-900/90 border border-brand-border px-3.5 py-1.5 rounded-full shadow-inner"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-red opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-brand-red"
+              ></span>
+            </span>
+            <span
+              class="text-[11px] font-semibold tracking-wider text-neutral-300 uppercase"
+            >
+              AVAILABLE FOR FREELANCE
+            </span>
+          </div>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            class="md:hidden p-2 rounded-lg bg-neutral-900 border border-brand-border text-neutral-300 hover:text-white transition-colors cursor-pointer"
+          >
+            <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div
+        id="mobile-menu"
+        class="menu-closed md:hidden border-t border-brand-border/60 bg-brand-black/95 px-6 overflow-hidden"
+      >
+        <nav
+          class="flex flex-col py-4 gap-3 text-xs font-semibold tracking-wider uppercase"
+        >
+          <a
+            href="#projects"
+            class="py-2 text-neutral-400 hover:text-white transition-colors border-b border-brand-border/30"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="py-2 text-neutral-400 hover:text-white transition-colors border-b border-brand-border/30"
+            >Experience</a
+          >
+          <a
+            href="#process"
+            class="py-2 text-neutral-400 hover:text-white transition-colors border-b border-brand-border/30"
+            >Process</a
+          >
+          <a
+            href="#contact"
+            class="py-2 text-neutral-400 hover:text-white transition-colors"
+            >Contact</a
+          >
+          <div
+            class="pt-2 sm:hidden flex items-center gap-2 text-[10px] text-neutral-400"
+          >
+            <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+            AVAILABLE FOR FREELANCE
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="relative z-10">
+      <!-- HERO SECTION -->
+      <section class="relative pt-12 pb-24 md:py-28 overflow-hidden">
+        <!-- Watermark text in background -->
+        <div
+          class="absolute -top-6 left-1/2 -translate-x-1/2 stroke-text font-heading text-[120px] md:text-[220px] lg:text-[280px] font-black tracking-tight leading-none pointer-events-none opacity-50 whitespace-nowrap z-0"
+        >
+          PORTFOLIO
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Details Column -->
+            <div class="lg:col-span-8 space-y-6">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-bold tracking-widest uppercase"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                WEB DEVELOPER &amp; UI/UX CREATOR
+              </div>
+
+              <h1
+                class="font-heading text-5xl sm:text-7xl xl:text-8xl font-black uppercase tracking-tight leading-[0.95] text-white"
+              >
+                MUHAMMAD<br />
+                RIJAL<br />
+                <span class="text-neutral-400">AHNAF</span>
+              </h1>
+
+              <p
+                class="text-neutral-400 text-base sm:text-lg max-w-xl font-normal leading-relaxed"
+              >
+                I design and build stylish, user-focused web experiences that
+                combine creativity with strategy. Passionate about clean design,
+                smooth interactions, and details that make a difference.
+              </p>
+
+              <div class="pt-4 flex flex-wrap items-center gap-4">
+                <a
+                  href="#projects"
+                  class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-brand-red hover:bg-brand-redHover text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-lg shadow-brand-red/25 hover:shadow-brand-red/40 hover:-translate-y-0.5"
+                >
+                  EXPLORE WORKS
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-brand-border bg-neutral-900/60 hover:bg-neutral-800 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  GET IN TOUCH
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Stats Card Column -->
+            <div class="lg:col-span-4">
+              <div
+                class="p-8 rounded-2xl bg-brand-card/90 border border-brand-border/80 backdrop-blur-sm divide-y divide-brand-border shadow-2xl space-y-6"
+              >
+                <!-- Stat 1 -->
+                <div class="pt-2 flex items-baseline justify-between">
+                  <div>
+                    <div
+                      class="font-heading text-5xl font-black text-white tracking-tight flex items-center"
+                    >
+                      3<span class="text-brand-red">+</span>
+                    </div>
+                    <div
+                      class="text-xs uppercase tracking-widest text-neutral-400 font-medium mt-1"
+                    >
+                      YEARS OF EXPERIENCE
+                    </div>
+                  </div>
+                  <span class="font-heading text-xs font-bold text-neutral-600"
+                    >01</span
+                  >
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="pt-6 flex items-baseline justify-between">
+                  <div>
+                    <div
+                      class="font-heading text-5xl font-black text-white tracking-tight flex items-center"
+                    >
+                      40<span class="text-brand-red">+</span>
+                    </div>
+                    <div
+                      class="text-xs uppercase tracking-widest text-neutral-400 font-medium mt-1"
+                    >
+                      PROJECTS COMPLETED
+                    </div>
+                  </div>
+                  <span class="font-heading text-xs font-bold text-neutral-600"
+                    >02</span
+                  >
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="pt-6 flex items-baseline justify-between">
+                  <div>
+                    <div
+                      class="font-heading text-5xl font-black text-white tracking-tight flex items-center"
+                    >
+                      20<span class="text-brand-red">+</span>
+                    </div>
+                    <div
+                      class="text-xs uppercase tracking-widest text-neutral-400 font-medium mt-1"
+                    >
+                      HAPPY CLIENTS
+                    </div>
+                  </div>
+                  <span class="font-heading text-xs font-bold text-neutral-600"
+                    >03</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SELECTED PROJECTS SECTION -->
+      <section
+        id="projects"
+        class="py-24 border-t border-brand-border/60 relative"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14"
+          >
+            <div>
+              <span
+                class="text-brand-red font-heading text-xs uppercase tracking-widest font-bold block mb-2"
+                >// PORTFOLIO SHOWCASE</span
+              >
+              <h2
+                class="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white"
+              >
+                SELECTED PROJECTS
+              </h2>
+            </div>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider text-neutral-400 hover:text-brand-red transition-colors group"
+            >
+              VIEW ALL PROJECTS
+              <span
+                class="transition-transform group-hover:translate-x-1 text-brand-red"
+                >-&gt;</span
+              >
+            </a>
+          </div>
+
+          <!-- Project Category Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2 mb-8">
+            <button
+              type="button"
+              class="project-filter-btn active px-3.5 py-1.5 rounded-lg bg-brand-card border border-brand-border text-xs font-mono uppercase tracking-wider text-neutral-300 transition-all hover:border-neutral-600 cursor-pointer"
+              data-filter="all"
+            >
+              All (3)
+            </button>
+            <button
+              type="button"
+              class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-brand-card border border-brand-border text-xs font-mono uppercase tracking-wider text-neutral-300 transition-all hover:border-neutral-600 cursor-pointer"
+              data-filter="ecommerce"
+            >
+              E-Commerce
+            </button>
+            <button
+              type="button"
+              class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-brand-card border border-brand-border text-xs font-mono uppercase tracking-wider text-neutral-300 transition-all hover:border-neutral-600 cursor-pointer"
+              data-filter="uiux"
+            >
+              UI/UX
+            </button>
+            <button
+              type="button"
+              class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-brand-card border border-brand-border text-xs font-mono uppercase tracking-wider text-neutral-300 transition-all hover:border-neutral-600 cursor-pointer"
+              data-filter="editorial"
+            >
+              Editorial
+            </button>
+          </div>
+
+          <!-- Projects 3-Column Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div
+              class="project-item group bg-brand-card rounded-2xl border border-brand-border hover:border-neutral-700 transition-all duration-300 p-5 flex flex-col justify-between hover:-translate-y-1"
+              data-category="ecommerce"
+            >
+              <div class="space-y-4">
+                <!-- Window / Mockup Preview -->
+                <div
+                  class="h-48 rounded-xl bg-neutral-900 border border-neutral-800 p-4 relative overflow-hidden flex flex-col justify-between"
+                >
+                  <div class="flex items-center justify-between">
+                    <div class="flex gap-1.5">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-brand-red/80"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-neutral-700"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-neutral-700"
+                      ></span>
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500"
+                      >veloce-store.io</span
+                    >
+                  </div>
+                  <div class="space-y-2">
+                    <div class="h-3 w-1/3 bg-brand-red/30 rounded"></div>
+                    <div class="h-2 w-1/2 bg-neutral-800 rounded"></div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="h-10 bg-neutral-800/80 rounded-lg"></div>
+                    <div
+                      class="h-10 bg-neutral-800/80 rounded-lg flex items-center justify-center text-[10px] text-brand-red font-mono"
+                    >
+                      $189
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Metadata -->
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between text-xs">
+                    <span
+                      class="text-brand-red font-semibold tracking-wider uppercase text-[11px]"
+                      >E-COMMERCE &bull; NEXT.JS &amp; TAILWIND</span
+                    >
+                    <span class="font-heading font-bold text-neutral-500"
+                      >01</span
+                    >
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand-red transition-colors"
+                  >
+                    Veloce E-Commerce
+                  </h3>
+                  <p class="text-neutral-400 text-xs leading-relaxed">
+                    Minimalist luxury streetwear store featuring ultrafast
+                    checkout, fluid page transitions, and scalable architecture.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between text-xs font-semibold text-neutral-400"
+              >
+                <span>Interactive Prototype</span>
+                <i
+                  data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-brand-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="project-item group bg-brand-card rounded-2xl border border-brand-border hover:border-neutral-700 transition-all duration-300 p-5 flex flex-col justify-between hover:-translate-y-1"
+              data-category="uiux"
+            >
+              <div class="space-y-4">
+                <!-- Window / Mockup Preview -->
+                <div
+                  class="h-48 rounded-xl bg-neutral-900 border border-neutral-800 p-4 relative overflow-hidden flex flex-col justify-between"
+                >
+                  <div class="flex items-center justify-between">
+                    <div class="flex gap-1.5">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-brand-red/80"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-neutral-700"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-neutral-700"
+                      ></span>
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500"
+                      >timeless-living.studio</span
+                    >
+                  </div>
+                  <div class="flex items-center justify-center py-4">
+                    <div
+                      class="w-20 h-16 rounded border border-neutral-700/80 bg-neutral-800/40 flex items-center justify-center text-[9px] text-neutral-400 uppercase tracking-widest text-center px-1"
+                    >
+                      SCANDI CHAIR
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div class="h-2 w-16 bg-brand-red/40 rounded"></div>
+                    <div
+                      class="px-2 py-1 rounded bg-brand-red/20 text-[9px] font-mono text-brand-red"
+                    >
+                      VIEW 3D MODEL
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Metadata -->
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between text-xs">
+                    <span
+                      class="text-brand-red font-semibold tracking-wider uppercase text-[11px]"
+                      >ARCHITECTURAL UI &bull; UI/UX &amp; FIGMA</span
+                    >
+                    <span class="font-heading font-bold text-neutral-500"
+                      >02</span
+                    >
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand-red transition-colors"
+                  >
+                    Timeless Furniture Website
+                  </h3>
+                  <p class="text-neutral-400 text-xs leading-relaxed">
+                    A warm, architectural showcase for Scandinavian interior
+                    pieces with interactive catalog browsing and clean forms.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between text-xs font-semibold text-neutral-400"
+              >
+                <span>Case Study &amp; Design</span>
+                <i
+                  data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-brand-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="project-item group bg-brand-card rounded-2xl border border-brand-border hover:border-neutral-700 transition-all duration-300 p-5 flex flex-col justify-between hover:-translate-y-1"
+              data-category="editorial"
+            >
+              <div class="space-y-4">
+                <!-- Window / Mockup Preview -->
+                <div
+                  class="h-48 rounded-xl bg-neutral-900 border border-neutral-800 p-4 relative overflow-hidden flex flex-col justify-between"
+                >
+                  <div class="flex items-center justify-between">
+                    <div class="flex gap-1.5">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-brand-red/80"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-neutral-700"
+                      ></span>
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-neutral-700"
+                      ></span>
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-500"
+                      >urbanic-mag.culture</span
+                    >
+                  </div>
+                  <div class="space-y-1.5">
+                    <div
+                      class="flex items-center justify-between text-[9px] text-neutral-400 font-mono"
+                    >
+                      <span>URBANIC ISS. 04</span>
+                      <span class="text-brand-red">READ NOW</span>
+                    </div>
+                    <div
+                      class="h-8 bg-neutral-800 rounded flex items-center px-3 text-[10px] font-heading font-bold text-neutral-300 uppercase"
+                    >
+                      EDITORIAL
+                    </div>
+                  </div>
+                  <div class="space-y-1">
+                    <div class="h-1.5 w-full bg-neutral-800 rounded"></div>
+                    <div class="h-1.5 w-2/3 bg-neutral-800 rounded"></div>
+                  </div>
+                </div>
+
+                <!-- Metadata -->
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between text-xs">
+                    <span
+                      class="text-brand-red font-semibold tracking-wider uppercase text-[11px]"
+                      >DIGITAL EDITORIAL &bull; JAVASCRIPT &amp; CMS</span
+                    >
+                    <span class="font-heading font-bold text-neutral-500"
+                      >03</span
+                    >
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold uppercase text-white group-hover:text-brand-red transition-colors"
+                  >
+                    Urbanic Magazine
+                  </h3>
+                  <p class="text-neutral-400 text-xs leading-relaxed">
+                    High-contrast digital publication focusing on underground
+                    electronic sound, architecture, and typographic art.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between text-xs font-semibold text-neutral-400"
+              >
+                <span>Editorial Layout</span>
+                <i
+                  data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-brand-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION, SKILLS & WORK PROCESS (SPLIT LAYOUT) -->
+      <section
+        id="experience"
+        class="py-24 border-t border-brand-border/60 relative"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- LEFT COLUMN: Education & Capabilities -->
+            <div class="lg:col-span-6 space-y-10">
+              <!-- Education Box -->
+              <div>
+                <span
+                  class="text-brand-red font-heading text-xs uppercase tracking-widest font-bold block mb-2"
+                  >// ACADEMIC BACKGROUND</span
+                >
+                <h2
+                  class="font-heading text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-6"
+                >
+                  EDUCATION &amp;<br />FOUNDATION
+                </h2>
+
+                <div
+                  class="bg-brand-card p-6 rounded-2xl border border-brand-border relative overflow-hidden"
+                >
+                  <div class="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                      <span
+                        class="inline-block px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-brand-red/10 text-brand-red rounded border border-brand-red/30 mb-2 uppercase"
+                      >
+                        Mahasiswa
+                      </span>
+                      <h3 class="font-heading text-xl font-bold text-white">
+                        Universitas Pamulang Serang
+                      </h3>
+                      <p class="text-neutral-400 text-sm font-medium mt-0.5">
+                        Mahasiswa in Information Systems (Sistem Informasi)
+                      </p>
+                    </div>
+                    <span
+                      class="text-xs font-mono text-neutral-500 bg-neutral-900 px-2 py-1 rounded border border-neutral-800"
+                      >SERANG, ID</span
+                    >
+                  </div>
+                  <p class="text-neutral-400 text-xs leading-relaxed mt-4">
+                    Focused on software engineering principles, human-computer
+                    interaction, database optimization, and strategic business
+                    systems analysis.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Skills Box -->
+              <div id="skills">
+                <span
+                  class="text-brand-red font-heading text-xs uppercase tracking-widest font-bold block mb-2"
+                  >// CAPABILITIES</span
+                >
+                <h3
+                  class="font-heading text-2xl font-black uppercase tracking-tight text-white mb-6"
+                >
+                  TECHNICAL EXPERTISE
+                </h3>
+
+                <div class="flex flex-wrap gap-2.5">
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    HTML5 / CSS3
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    JavaScript (ES6+)
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    UI/UX Design
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    Figma &amp; Prototyping
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    PHP
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    MySQL &amp; Databases
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    Flutter
+                  </span>
+                  <span
+                    class="px-4 py-2 rounded-xl bg-brand-card border border-brand-border text-xs font-medium text-neutral-300 flex items-center gap-2 hover:border-brand-red transition-colors"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+                    Tailwind CSS
+                  </span>
+                </div>
+              </div>
+
+              <!-- Design Philosophy Quote Card -->
+              <div
+                class="p-6 rounded-2xl bg-neutral-900/60 border border-brand-border relative"
+              >
+                <i
+                  data-lucide="quote"
+                  class="w-8 h-8 text-brand-red/30 mb-3"
+                ></i>
+                <p
+                  class="text-neutral-300 text-sm font-medium italic leading-relaxed"
+                >
+                  "Good design is not just how it looks, but how it works."
+                </p>
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-neutral-500 font-mono"
+                >
+                  <span>DESIGN PHILOSOPHY</span>
+                  <span class="text-brand-red">MUHAMMAD RIZAL AHNAF</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Work Process Methodology -->
+            <div id="process" class="lg:col-span-6 space-y-6">
+              <div>
+                <span
+                  class="text-brand-red font-heading text-xs uppercase tracking-widest font-bold block mb-2"
+                  >// METHODOLOGY</span
+                >
+                <h2
+                  class="font-heading text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-6"
+                >
+                  WORK PROCESS
+                </h2>
+              </div>
+
+              <!-- Steps List -->
+              <div class="space-y-4">
+                <!-- Step 01 -->
+                <div
+                  class="p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-neutral-700 transition-all flex gap-5 items-start"
+                >
+                  <span class="font-heading text-2xl font-black text-brand-red"
+                    >01</span
+                  >
+                  <div>
+                    <h3
+                      class="font-heading text-base font-bold uppercase text-white tracking-wider mb-1"
+                    >
+                      DISCOVER
+                    </h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                      Deep immersion into project goals, competitor landscaping,
+                      user persona interviews, and identifying concrete
+                      deliverables.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div
+                  class="p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-neutral-700 transition-all flex gap-5 items-start"
+                >
+                  <span class="font-heading text-2xl font-black text-brand-red"
+                    >02</span
+                  >
+                  <div>
+                    <h3
+                      class="font-heading text-base font-bold uppercase text-white tracking-wider mb-1"
+                    >
+                      IDEATE
+                    </h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                      Mapping user journeys, establishing information hierarchy,
+                      wireframing UX flows, and creating rapid low-fidelity
+                      sketches.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div
+                  class="p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-neutral-700 transition-all flex gap-5 items-start"
+                >
+                  <span class="font-heading text-2xl font-black text-brand-red"
+                    >03</span
+                  >
+                  <div>
+                    <h3
+                      class="font-heading text-base font-bold uppercase text-white tracking-wider mb-1"
+                    >
+                      DESIGN
+                    </h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                      Crafting high-fidelity UI components in Figma, defining
+                      scalable design systems, typography hierarchy, and
+                      interactive micro-animations.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div
+                  class="p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-neutral-700 transition-all flex gap-5 items-start"
+                >
+                  <span class="font-heading text-2xl font-black text-brand-red"
+                    >04</span
+                  >
+                  <div>
+                    <h3
+                      class="font-heading text-base font-bold uppercase text-white tracking-wider mb-1"
+                    >
+                      DEVELOP
+                    </h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                      Translating prototypes into performant, responsive
+                      frontend code with semantic HTML, Tailwind CSS, clean
+                      architecture, and snappy APIs.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 05 -->
+                <div
+                  class="p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-neutral-700 transition-all flex gap-5 items-start"
+                >
+                  <span class="font-heading text-2xl font-black text-brand-red"
+                    >05</span
+                  >
+                  <div>
+                    <h3
+                      class="font-heading text-base font-bold uppercase text-white tracking-wider mb-1"
+                    >
+                      DELIVER
+                    </h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                      Cross-browser and accessibility testing, SEO optimization,
+                      deployment to production infrastructure, and client
+                      handover.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT / LET'S WORK TOGETHER FOOTER SECTION -->
+      <section
+        id="contact"
+        class="py-24 border-t border-brand-border/60 relative overflow-hidden"
+      >
+        <!-- Glow background -->
+        <div
+          class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-red/10 blur-[150px] pointer-events-none rounded-full"
+        ></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left CTA & Info -->
+            <div class="lg:col-span-6 space-y-8">
+              <div>
+                <span
+                  class="text-brand-red font-heading text-xs uppercase tracking-widest font-bold block mb-2"
+                  >// INITIATE COLLABORATION</span
+                >
+                <h2
+                  class="font-heading text-5xl sm:text-7xl font-black uppercase tracking-tight text-white leading-[0.95]"
+                >
+                  LET'S<br />WORK<br />
+                  <span class="text-brand-red">TOGETHER</span>
+                </h2>
+                <p
+                  class="text-neutral-400 text-base max-w-lg mt-6 leading-relaxed"
+                >
+                  Have an exciting idea, web project, or looking for a full-time
+                  UI/UX specialist? Let's connect and build an impactful digital
+                  experience tailored to your vision.
+                </p>
+              </div>
+
+              <!-- Freelance Button -->
+              <div>
+                <a
+                  href="mailto:mrijalahnaf65@gmail.com"
+                  class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-xl shadow-brand-red/25 hover:shadow-brand-red/40 hover:-translate-y-0.5"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-white animate-pulse"
+                  ></span>
+                  AVAILABLE FOR FREELANCE &mdash; HIRE ME
+                </a>
+              </div>
+
+              <!-- Details Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                <div class="space-y-1">
+                  <span class="text-[11px] font-mono text-neutral-500 uppercase"
+                    >DIRECT EMAIL</span
+                  >
+                  <div>
+                    <a
+                      href="mailto:mrijalahnaf65@gmail.com"
+                      class="text-sm font-semibold text-neutral-200 hover:text-brand-red transition-colors inline-flex items-center gap-1.5"
+                    >
+                      mrijalahnaf65@gmail.com
+                      <i
+                        data-lucide="external-link"
+                        class="w-3.5 h-3.5 text-neutral-500"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <span class="text-[11px] font-mono text-neutral-500 uppercase"
+                    >WEBSITE URL</span
+                  >
+                  <div>
+                    <a
+                      href="javascript:void(0)"
+                      data-copy-text="mrijalahnaf.dev"
+                      title="Click to copy URL"
+                      class="text-sm font-semibold text-neutral-200 hover:text-brand-red transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                    >
+                      mrijalahnaf.dev
+                      <i
+                        data-lucide="external-link"
+                        class="w-3.5 h-3.5 text-neutral-500"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <span class="text-[11px] font-mono text-neutral-500 uppercase"
+                    >PHONE / WHATSAPP</span
+                  >
+                  <p
+                    class="text-sm font-semibold text-neutral-200 cursor-pointer hover:text-brand-red transition-colors"
+                    data-copy-text="+62 813-8483-4149"
+                    title="Click to copy phone"
+                  >
+                    +62 813-8483-4149
+                  </p>
+                </div>
+
+                <div class="space-y-1">
+                  <span class="text-[11px] font-mono text-neutral-500 uppercase"
+                    >BASE LOCATION</span
+                  >
+                  <p
+                    class="text-sm font-semibold text-neutral-200 flex items-center gap-1.5"
+                  >
+                    <i
+                      data-lucide="map-pin"
+                      class="w-3.5 h-3.5 text-brand-red"
+                    ></i>
+                    Serang, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Interactive Contact Form -->
+            <div class="lg:col-span-6">
+              <div
+                class="p-6 sm:p-8 rounded-2xl bg-brand-card border border-brand-border/80 shadow-2xl relative"
+              >
+                <!-- Window Chrome / Form Header -->
+                <div
+                  class="flex items-center justify-between border-b border-brand-border pb-4 mb-6"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-3 h-3 rounded-full bg-brand-red shadow-[0_0_8px_#FF2A2A]"
+                    ></span>
+                    <span class="w-3 h-3 rounded-full bg-neutral-700"></span>
+                    <span class="w-3 h-3 rounded-full bg-neutral-700"></span>
+                    <span
+                      class="ml-2 text-xs font-heading font-bold text-white uppercase tracking-wider"
+                    >
+                      Send a Message
+                    </span>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-neutral-500 uppercase tracking-widest"
+                  >
+                    DIRECT DISPATCH
+                  </span>
+                </div>
+
+                <!-- Interactive Form -->
+                <form
+                  id="portfolio-contact-form"
+                  action="https://formsubmit.co/mrijalahnaf65@gmail.com"
+                  method="POST"
+                  class="space-y-4"
+                >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_subject" value="Pesan Baru dari Portofolio!" />
+                  <!-- Name Input -->
+                  <div>
+                    <label
+                      for="contact-name"
+                      class="block text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1.5"
+                    >
+                      Nama Lengkap <span class="text-brand-red">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      name="name"
+                      required
+                      placeholder="Contoh: Muhammad Rizal"
+                      class="w-full px-4 py-3 rounded-xl bg-neutral-900/90 border border-brand-border text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all"
+                    />
+                  </div>
+
+                  <!-- Email Input -->
+                  <div>
+                    <label
+                      for="contact-email"
+                      class="block text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1.5"
+                    >
+                      Alamat Email <span class="text-brand-red">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      name="email"
+                      required
+                      placeholder="nama@domain.com"
+                      class="w-full px-4 py-3 rounded-xl bg-neutral-900/90 border border-brand-border text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all"
+                    />
+                  </div>
+
+                  <!-- Message Textarea -->
+                  <div>
+                    <label
+                      for="contact-message"
+                      class="block text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1.5"
+                    >
+                      Pesan Anda <span class="text-brand-red">*</span>
+                    </label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      rows="4"
+                      required
+                      placeholder="Ceritakan proyek, ide, atau pertanyaan Anda di sini..."
+                      class="w-full px-4 py-3 rounded-xl bg-neutral-900/90 border border-brand-border text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all resize-none"
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button
+                    type="submit"
+                    id="contact-submit-btn"
+                    class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-lg shadow-brand-red/25 hover:shadow-brand-red/40 hover:-translate-y-0.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    <span id="submit-btn-text">KIRIM PESAN SEKARANG</span>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-brand-border/60 py-8 relative z-10 bg-brand-black"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500"
+      >
+        <div>&copy; 2026 Muhammad Rizal Ahnaf. All rights reserved.</div>
+        <div class="flex items-center gap-6 font-mono text-[11px] uppercase">
+          <a
+            href="#"
+            id="back-to-top"
+            class="hover:text-white transition-colors"
+            >BACK TO TOP &uarr;</a
+          >
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-red transition-colors"
+            >GITHUB</a
+          >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-red transition-colors"
+            >LINKEDIN</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div
+      id="toast-notification"
+      class="toast-hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-neutral-900 border border-brand-border text-white text-xs font-mono shadow-2xl backdrop-blur-md"
+    >
+      <span
+        class="w-2 h-2 rounded-full bg-brand-red shadow-[0_0_8px_#FF2A2A]"
+      ></span>
+      <span id="toast-message">Copied to clipboard!</span>
+    </div>
+  </body>
+</html>
